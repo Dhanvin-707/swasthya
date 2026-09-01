@@ -1,0 +1,286 @@
+.doctor-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.doctor-page__hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.doctor-page__title {
+  margin: 0;
+  font-size: 26px;
+}
+
+.doctor-page__subtitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.doctor-page__tagline {
+  margin: var(--space-2) 0 0;
+  color: var(--color-muted);
+}
+
+.doctor-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.doctor-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 1024px) {
+  .doctor-page__grid {
+    grid-template-columns: 1fr 360px;
+  }
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.chat-panel__messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 420px;
+  overflow-y: auto;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.chat-panel__message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chat-panel__message--ai {
+  align-items: flex-start;
+}
+
+.chat-panel__message--user {
+  align-items: flex-end;
+}
+
+.chat-panel__bubble {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.chat-panel__message--ai .chat-panel__bubble {
+  background: var(--color-surface-muted);
+}
+
+.chat-panel__message--user .chat-panel__bubble {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.chat-panel__bubble--attached {
+  background: var(--color-primary-soft);
+  color: var(--color-foreground);
+  font-size: 14px;
+}
+
+.chat-panel__meta {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.chat-panel__composer {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.chat-panel__input {
+  flex: 1;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-foreground);
+}
+
+.quick-prompts__title {
+  margin: 0 0 var(--space-3);
+}
+
+.quick-prompts__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.quick-prompts__prompt {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  text-align: left;
+}
+
+.quick-prompts__prompt:hover {
+  background: var(--color-surface-muted);
+}
+
+.drug-panel {
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.drug-panel__title {
+  margin: 0 0 var(--space-3);
+}
+
+.drug-panel__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.drug-panel__item p {
+  margin: var(--space-1) 0 0;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.health-vault {
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.health-vault__title {
+  margin: 0 0 var(--space-3);
+}
+
+.health-vault__list-title {
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.health-vault__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.health-vault__item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.health-vault__item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.health-vault__item-title {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.health-vault__item-meta {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.health-vault__attach {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.health-vault__empty {
+  color: var(--color-muted);
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.file-upload--dragging {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.file-upload__text {
+  margin: 0;
+  font-weight: 600;
+}
+
+.file-upload__hint {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.file-upload__browse {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.file-upload__state {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.file-upload__error {
+  margin: 0;
+  color: var(--color-destructive);
+}

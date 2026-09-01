@@ -1,0 +1,88 @@
+import type { LanguageCode } from "../types";
+
+export type TranslationKey = keyof typeof en;
+
+export const en = {
+  "app.title": "Swasthya AI",
+  "app.subtitle": "National Digital Health Stack",
+  "app.footer":
+    "Swasthya AI • National Digital Health Stack — Unified Healthcare Ecosystem for Rural & Underserved Communities",
+  "demo.notice": "Demo data only — not for real medical decisions",
+  "helpline.label": "24x7 Government Health Helplines",
+  "helpline.hint": "Tap any number to call directly",
+  "helpline.ambulance": "108 Ambulance",
+  "helpline.national": "112 National Emergency",
+  "helpline.telehealth": "14555 Tele-Health",
+  "helpline.janaushadhi": "1800-11-4477 Jan Aushadhi",
+  "nav.doctor": "AI Doctor Chatbot",
+  "nav.doctors": "Find Doctors Nearby",
+  "nav.tests": "Tests & Vaccinations",
+  "nav.disease": "Disease Map",
+  "nav.feed": "Health Feed",
+  "nav.alerts": "Live Alerts",
+  "nav.profile": "Profile",
+  "nav.toggle": "Toggle Navigation Menu",
+  "profile.signOut": "Sign Out / Switch",
+  "onboarding.welcome": "Welcome to Swasthya Digital Health Stack",
+  "onboarding.portal": "National Health Portal",
+  "onboarding.step1": "Aadhaar & Mobile Demo Sign-up",
+  "onboarding.step2": "Choose Your Preferred Local Language",
+  "onboarding.citizens": "Quick Demo Citizens:",
+  "onboarding.enterAadhaar":
+    "Enter demo Aadhaar number or click a pre-filled profile below to test.",
+  "onboarding.name": "Full Citizen Name",
+  "onboarding.aadhaar": "12-Digit Aadhaar Number",
+  "onboarding.mobile": "10-Digit Mobile Number",
+  "onboarding.continue": "Next: Choose Preferred Language",
+  "onboarding.enterPortal": "Continue to Swasthya Portal",
+  "onboarding.back": "Back",
+  "onboarding.languageNote":
+    "Website interface & AI doctor will transform to your chosen language.",
+  "onboarding.error.empty": "Please enter your Aadhaar and Mobile Number.",
+  "onboarding.error.aadhaar": "Aadhaar must be exactly 12 digits.",
+  "onboarding.error.mobile": "Mobile number must be 10 digits.",
+  "doctor.title": "Swasthya AI Doctor",
+  "doctor.subtitle": "24x7 AI Doctor",
+  "doctor.tagline": "Get instant medical advice and insights",
+  "doctor.bookNearby": "Book Doctor Nearby",
+  "doctor.call108": "Call 108 Emergency",
+  "doctor.reports": "Medical Reports",
+  "doctor.vault": "Health Vault",
+  "doctor.dropzone": "Drag and drop your medical reports here",
+  "doctor.supports": "Supports PDF, JPG, PNG files",
+  "doctor.browse": "Browse Files",
+  "doctor.attached": "Attached Medical Documents:",
+  "doctor.attach": "Attach",
+  "doctor.analyze": "Analyze Selected Report with AI Doctor",
+  "doctor.prompts": "Quick Test Prompts:",
+  "doctor.placeholder": "Describe your symptoms or ask a health question...",
+  "doctor.send": "Send",
+  "doctor.disclaimer":
+    "This is informational demo advice, not a medical diagnosis. For urgent symptoms call 108 or 112.",
+  "doctor.drugInteractions": "Drug interactions",
+  "doctor.greeting":
+    "Namaste {name}! I am Swasthya AI Doctor. I can review your medical history, analyze lab reports, check drug interactions, and guide you to nearby specialists. How are you feeling today?",
+  "errors.fileType": "Only PDF, JPG, and PNG files are supported.",
+  "errors.fileSize": "File is too large. Maximum size is 10 MB.",
+  "common.loading": "Loading…",
+  "common.retry": "Retry",
+  "common.close": "Close",
+  "common.cancel": "Cancel",
+  "common.confirm": "Confirm",
+  "common.reset": "Reset demo",
+} as const;
+
+export type Dictionary = { [K in keyof typeof en]: string };
+
+export const translations: Record<LanguageCode, Dictionary> = {
+  en,
+  hi: { ...en, "app.title": "स्वास्थ्य AI", "app.subtitle": "राष्ट्रीय डिजिटल स्वास्थ्य स्टैक" },
+  mr: { ...en, "app.title": "स्वास्थ्य AI", "app.subtitle": "राष्ट्रीय डिजिटल आरोग्य स्टॅक" },
+  te: { ...en, "app.title": "స్వాస్థ్య AI", "app.subtitle": "జాతీయ డిజిటల్ ఆరోగ్య స్టాక్" },
+  ta: { ...en, "app.title": "சுவாஸ்த்யா AI", "app.subtitle": "தேசிய டிஜிட்டல் சுகாதார அடுக்கு" },
+  bn: { ...en, "app.title": "স্বাস্থ্য AI", "app.subtitle": "জাতীয় ডিজিটাল স্বাস্থ্য স্ট্যাক" },
+  gu: { ...en, "app.title": "સ્વાસ્થ્ય AI", "app.subtitle": "રાષ્ટ્રીય ડિજિટલ આરોગ્ય સ્ટેક" },
+  kn: { ...en, "app.title": "ಸ್ವಾಸ್ಥ್ಯ AI", "app.subtitle": "ರಾಷ್ಟ್ರೀಯ ಡಿಜಿಟಲ್ ಆರೋಗ್ಯ ಸ್ಟ್ಯಾಕ್" },
+  ml: { ...en, "app.title": "സ്വാസ്ഥ്യ AI", "app.subtitle": "ദേശീയ ഡിജിറ്റൽ ആരോഗ്യ സ്റ്റാക്ക്" },
+  pa: { ...en, "app.title": "ਸਵਾਸਥਿਆ AI", "app.subtitle": "ਰਾਸ਼ਟਰੀ ਡਿਜੀਟਲ ਸਿਹਤ ਸਟੈਕ" },
+};

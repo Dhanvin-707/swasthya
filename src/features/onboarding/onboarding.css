@@ -1,0 +1,103 @@
+.onboarding {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+}
+
+.onboarding__brand {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.onboarding__brand h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.onboarding__brand p {
+  margin: var(--space-1) 0 0;
+  color: var(--color-muted);
+}
+
+.onboarding__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.onboarding__title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.onboarding__subtitle {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.onboarding__step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.onboarding__step h3 {
+  margin: 0;
+}
+
+.onboarding__help {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.onboarding__citizens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.onboarding__citizens-label {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.onboarding__citizen {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.onboarding__citizen:hover {
+  background: #cffafe;
+}
+
+.onboarding__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.onboarding__lang-label {
+  font-weight: 600;
+}
+
+.onboarding__lang-select {
+  min-height: 44px;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-foreground);
+}
+
+.onboarding__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

@@ -1,0 +1,36 @@
+import type { Citizen } from "../types";
+
+export const citizens: Citizen[] = [
+  {
+    id: "citizen-kamla",
+    name: "Kamla Devi",
+    age: 26,
+    gender: "female",
+    aadhaarNo: "982610495831",
+    mobile: "9826104958",
+    abhaId: "91-9826-1049",
+    dob: "1998-04-12",
+    bloodGroup: "B+",
+    emergencyContact: "Ramesh Yadav — 9826112233",
+    address: "Village Chandanpur, Block Sehore, MP",
+    primaryPhc: "Rampur Primary Health Centre (PHC)",
+    attendingDoctor: "Dr. Rajesh Sharma",
+    immunizationStatus: "Fully immunized (adult schedule)",
+  },
+  {
+    id: "citizen-ramcharan",
+    name: "Ramcharan Yadav",
+    age: 62,
+    gender: "male",
+    aadhaarNo: "940652210982",
+    mobile: "9406522109",
+    abhaId: "91-9406-5221",
+    dob: "1962-09-05",
+    bloodGroup: "O+",
+    emergencyContact: "Suresh Yadav — 9406551122",
+    address: "Village Rampur, Block Sehore, MP",
+    primaryPhc: "Rampur Primary Health Centre (PHC)",
+    attendingDoctor: "Dr. V. K. Gupta",
+    immunizationStatus: "Influenza vaccination completed",
+  },
+];
