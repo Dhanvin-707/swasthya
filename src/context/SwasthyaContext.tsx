@@ -44,6 +44,7 @@ interface SwasthyaContextValue {
   addChatMessage: (text: string, attachedDoc?: string) => void;
   documents: MedicalDocument[];
   addDocument: (doc: MedicalDocument) => void;
+  addUploadedDocumentMetadata: (doc: MedicalDocument) => void;
   markDocumentAttached: (id: string) => void;
   appointments: Appointment[];
   addAppointment: (appointment: Appointment) => void;
@@ -139,6 +140,8 @@ export function SwasthyaProvider({ children }: { children: ReactNode }) {
     setDocuments((prev) => [doc, ...prev]);
   }, []);
 
+  const addUploadedDocumentMetadata = addDocument;
+
   const markDocumentAttached = useCallback((id: string) => {
     setDocuments((prev) =>
       prev.map((d) => (d.id === id ? { ...d, attached: true } : d)),
@@ -194,6 +197,7 @@ export function SwasthyaProvider({ children }: { children: ReactNode }) {
       addChatMessage,
       documents,
       addDocument,
+      addUploadedDocumentMetadata,
       markDocumentAttached,
       appointments,
       addAppointment,
@@ -213,6 +217,7 @@ export function SwasthyaProvider({ children }: { children: ReactNode }) {
       addChatMessage,
       documents,
       addDocument,
+      addUploadedDocumentMetadata,
       markDocumentAttached,
       appointments,
       addAppointment,
