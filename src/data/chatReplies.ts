@@ -38,3 +38,24 @@ export const chatPrompts: ChatPrompt[] = [
 
 export const emergencyDisclaimer =
   "This is informational demo advice, not a medical diagnosis. For urgent symptoms call 108 or 112.";
+
+export function getAiReply(text: string): string {
+  const msg = text.toLowerCase();
+  if (msg.includes("cbc") || msg.includes("anemia")) return chatPrompts[0].reply;
+  if (msg.includes("fever") || msg.includes("joint pain") || msg.includes("102")) {
+    return chatPrompts[1].reply;
+  }
+  if (
+    msg.includes("fasting blood sugar") ||
+    msg.includes("blood sugar") ||
+    msg.includes("fbs") ||
+    msg.includes("142")
+  ) {
+    return chatPrompts[2].reply;
+  }
+  if (msg.includes("dengue")) return chatPrompts[3].reply;
+  if (msg.includes("analyze attached document") || msg.includes("attached")) {
+    return "I have received your attached report. Based on the sample findings there are no urgent red flags, but please share your latest readings and consult your PHC doctor for a full interpretation. (Demo reply)";
+  }
+  return "Thanks for your message. I am a demo assistant with limited canned responses — try asking about CBC, blood sugar, fever, or dengue. For real concerns please visit your PHC doctor, or call 108/112 in an emergency.";
+}
