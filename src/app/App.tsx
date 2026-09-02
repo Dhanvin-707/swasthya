@@ -6,25 +6,17 @@ import { Header } from "@/components/shell/Header";
 import { NavTabs } from "@/components/shell/NavTabs";
 import { Footer, DemoNotice } from "@/components/shell/Footer";
 import { Onboarding } from "@/components/shell/Onboarding";
+import { EmergencySosDispatchedDialog } from "@/components/shell/EmergencySos";
 import { ToastViewport } from "@/components/ui/toast";
 import { LoadingState } from "@/components/ui/states";
-import { ProfilePlaceholder } from "@/features/ProfilePlaceholder";
+import DoctorPage from "@/features/doctor/DoctorPage";
+import FeedPage from "@/features/feed/FeedPage";
+import AlertsPage from "@/features/alerts/AlertsPage";
+import ProfilePage from "@/features/profile/ProfilePage";
 
 const DoctorsPage = lazy(() => import("@/features/doctors/DoctorsPage"));
 const TestsPage = lazy(() => import("@/features/tests/TestsPage"));
-
-function Placeholder({ title, owner }: { title: string; owner: string }) {
-  return (
-    <div className="mx-auto max-w-6xl px-4 py-6">
-      <section className="rounded-xl border border-dashed border-line bg-card p-8 text-center">
-        <h1 className="text-lg font-bold text-fg">{title}</h1>
-        <p className="mt-2 text-sm text-muted">
-          Page slot ready. Feature implementation owned by {owner} on a separate branch.
-        </p>
-      </section>
-    </div>
-  );
-}
+const DiseaseMapPage = lazy(() => import("@/features/disease-map/DiseaseMapPage"));
 
 function TabContent() {
   const { activeTab } = useSwasthya();
@@ -45,20 +37,24 @@ function TabContent() {
         </Suspense>
       );
       break;
-    case "profile":
-      content = <ProfilePlaceholder />;
-      break;
     case "disease-map":
-      content = <Placeholder title="Disease Map (IDSP)" owner="Developer C" />;
+      content = (
+        <Suspense fallback={<LoadingState label="Loading Disease Map…" />}>
+          <DiseaseMapPage />
+        </Suspense>
+      );
       break;
     case "feed":
-      content = <Placeholder title="Health Feed" owner="Developer C" />;
+      content = <FeedPage />;
       break;
     case "alerts":
-      content = <Placeholder title="Live Alerts" owner="Developer C" />;
+      content = <AlertsPage />;
+      break;
+    case "profile":
+      content = <ProfilePage />;
       break;
     default:
-      content = <Placeholder title="AI Doctor & Health Vault" owner="Developer A" />;
+      content = <DoctorPage />;
   }
 
   return (
@@ -87,6 +83,7 @@ function Shell() {
       </main>
       <Footer />
       <ToastViewport />
+      <EmergencySosDispatchedDialog />
     </div>
   );
 }

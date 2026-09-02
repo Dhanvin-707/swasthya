@@ -9,6 +9,8 @@ export const PATIENTS: Patient[] = [
     bloodGroup: "B+",
     aadhaar: "982610495831",
     abhaId: "91-9826-1049",
+    abhaQrPayload:
+      "ABHA:91-9826-1049|NAME:Kamla Devi|DOB:1998-04-12|BLOOD:B+|AADHAAR:982610495831",
     mobile: "9826104958",
     address: "Village Rampur, Block Sehore, Madhya Pradesh",
     phc: "Rampur Model PHC Unit",
@@ -24,6 +26,8 @@ export const PATIENTS: Patient[] = [
     bloodGroup: "O+",
     aadhaar: "940652210982",
     abhaId: "91-9406-5221",
+    abhaQrPayload:
+      "ABHA:91-9406-5221|NAME:Ramcharan Yadav|DOB:1962-09-05|BLOOD:O+|AADHAAR:940652210982",
     mobile: "9406522109",
     address: "Village Devgarh, Block Sehore, Madhya Pradesh",
     phc: "Devgarh Model Health & Wellness Centre",
